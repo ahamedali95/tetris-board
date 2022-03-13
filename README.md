@@ -45,7 +45,7 @@ Instructions to run the application locally:
 
 
 Application is deployed to Firebase and it can be accessed using this url: https://sholy-frontend.web.app/
-CI-CD visual workflow can be viewed here: https://github.com/ahamedali95/url-shortener-frontend/actions
+CI-CD visual workflow can be viewed here: https://github.com/ahamedali95/tetris-board/actions
 For in-depth understanding of pipeline details, view: `<rootDir>/.github/workflows/deployment.yml`
 
 Thank you for testing out my app!
