@@ -44,8 +44,10 @@ Instructions to run the application locally:
 7. Checkout other scripts in package.json that allows you to perform other actions
 
 
-Application is deployed to Firebase and it can be accessed using this url: https://sholy-frontend.web.app/
+Application is deployed to Firebase and it can be accessed using this url: https://tetris-board.web.app/
+
 CI-CD visual workflow can be viewed here: https://github.com/ahamedali95/tetris-board/actions
+
 For in-depth understanding of pipeline details, view: `<rootDir>/.github/workflows/deployment.yml`
 
 Thank you for testing out my app!
