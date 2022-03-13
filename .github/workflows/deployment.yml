@@ -31,8 +31,6 @@ jobs:
           npm run lint
           echo "Running TypeScript static analysis"
           npm run check:typings
-          echo "Running production build"
-          npm run build:prod
 
       - name: Unit Tests
         run: npm run test
@@ -68,19 +66,19 @@ jobs:
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 
-#  deployment:
-#    name: Deploy to Dev
-#    needs: [ build, security ]
-#    runs-on: ubuntu-latest
-#    environment:
-#      name: dev
-#
-#    steps:
-#      - uses: actions/checkout@v2
-#      - run: npm ci && npm run build:prod
-#      - uses: FirebaseExtended/action-hosting-deploy@v0
-#        with:
-#          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-#          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_SHOLY_FRONTEND }}'
-#          channelId: live
-#          projectId: sholy-frontend
+  deployment:
+    name: Deploy to Dev
+    needs: [ build, security ]
+    runs-on: ubuntu-latest
+    environment:
+      name: dev
+
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm ci && npm run build:prod
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_SHOLY_FRONTEND }}'
+          channelId: live
+          projectId: tetris-board
