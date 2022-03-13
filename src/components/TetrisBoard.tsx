@@ -18,7 +18,11 @@ const TetrisBoard: React.FC<TetrisBoardProps> = ({ inputValue, drawTetris, reset
     const [ width, height ] = [ 500, 5050 ];
 
     const preloadImages = async (): Promise<void> => {
-        await Promise.all(getPromises(getImages) as Promise<HTMLImageElement>[]);
+        try {
+            await Promise.all(getPromises(getImages) as Promise<HTMLImageElement>[]);
+        } catch (e) {
+            console.log((e as Error).message);
+        }
     };
 
     const getPromises = (images: MyImage[]): Promise<HTMLImageElement>[] => {

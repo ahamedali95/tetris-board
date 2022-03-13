@@ -1,7 +1,13 @@
 module.exports = {
   testEnvironment: "jsdom",
   collectCoverageFrom: [
-    "<rootDir>/src/**/*.{ts,tsx}"
+    "<rootDir>/src/**/*.{ts,tsx}",
+    "!<rootDir>/src/layout",
+    "!<rootDir>/src/service-worker.ts",
+    "!<rootDir>/src/custom.d.ts",
+    "!<rootDir>/src/index.tsx",
+    "!<rootDir>/src/types.ts",
+    "!<rootDir>/src/wdyr.ts"
   ],
   coverageDirectory: "coverage",
   testMatch: [
@@ -12,8 +18,7 @@ module.exports = {
     "tsx",
     "js",
     "jsx",
-    "json",
-    "png"
+    "json"
   ],
   "moduleNameMapper": {
     "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "identity-obj-proxy",
