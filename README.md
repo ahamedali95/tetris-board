@@ -1,6 +1,6 @@
 Tetris Board Application
 
-First of all I want to thank the DRW team for allowing me to take this challenge. Definitely 
+First of all I want to thank you guys for allowing me to take this challenge. Definitely 
 enjoyed every bit of it; initially got frustrated but after I break down the program, it is much easier.
 
 Application Overview:
